@@ -1,6 +1,4 @@
 import requests
-import hashlib
-import sys
 from bs4 import BeautifulSoup
 
 visited_pages = []
@@ -64,7 +62,6 @@ def find_page_data(main_url, depth=0):
             continue
 
         if domain in url and url not in visited_pages:
-            print(url)
             visited_pages.append(url)
             page_info = {}
             page_info['url'] = url
