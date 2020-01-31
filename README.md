@@ -15,8 +15,9 @@ Example:
 
 ```https://simple-web-crawler.herokuapp.com/crawl?domain=http://nubank.com.br/&depth=0```
 
-It returns a list of links with all the JS links, CSS links, Image links and also the depth of the page related to
-the link provided. 
+You can call it with your browser, but something like Postman may be a better choice, since the visualization of the result will be better. 
+
+The endpoint returns a list of links with all the JS links, CSS links, Image links and also the depth of the page related to the link provided. 
 
 ## Running locally
 
