@@ -7,7 +7,7 @@ app = Flask(__name__)
 def main_message():
     return jsonify('Welcome! Please send your requests to the /crawl with domain and depth parameters.')
 
-@app.route('/crawl', methods=['GET'])
+@app.route('/crawl/', methods=['GET'])
 def get_tasks():
     try:
         domain = request.args.get('domain')
