@@ -27,7 +27,7 @@ def find_page_data(main_url, depth=0):
     css_tags = soup.find_all('link', rel='stylesheet', href=True)
     img_tags = soup.find_all('img')
 
-    if main_url.endswith("/"):
+    if main_url.endswith('/'):
         domain = main_url[:-1]
     else:
         domain = main_url
@@ -37,21 +37,30 @@ def find_page_data(main_url, depth=0):
         if 'http' in js_link:
             all_js_links.append(js_link)
         else:
-            all_js_links.append(domain + '/' + js_link)
+            if js_link.startswith('/'):
+                all_js_links.append(domain + js_link)
+            else:
+                all_js_links.append(domain + '/' + js_link)
 
     for tag in css_tags:
         css_link = tag.get('href')
         if 'http' in css_link:
             all_css_links.append(css_link)
         else:
-            all_css_links.append(domain + '/' + css_link)
+            if css_link.startswith('/'):
+                all_css_links.append(domain + css_link)
+            else:
+                all_css_links.append(domain + '/' + css_link)
 
     for tag in img_tags:
         img_link = tag.get('src')
         if 'http' in img_link:
             all_img_links.append(img_link)
         else:
-            all_img_links.append(domain + '/' +img_link)
+            if img_link.startswith('/'):
+                all_img_links.append(domain + img_link)
+            else:
+                all_img_links.append(domain + '/' + img_link)
 
     for a_tag in a_tags:
         if 'http://' not in a_tag['href'] and 'https://' not in a_tag['href'] and '/' in a_tag['href']:
