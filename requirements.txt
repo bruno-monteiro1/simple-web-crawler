@@ -29,7 +29,7 @@ pycodestyle==2.5.0
 pylint==2.4.4
 PyPDF2==1.26.0
 PySocks==1.7.1
-PyYAML==5.1.2
+PyYAML==5.4
 query-string==2019.4.13
 request==2019.4.13
 requests==2.22.0
