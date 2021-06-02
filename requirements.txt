@@ -39,7 +39,7 @@ six==1.13.0
 soupsieve==1.9.5
 toml==0.10.0
 tweepy==3.8.0
-urllib3==1.25.7
+urllib3==1.26.5
 virtualenv==16.7.8
 Werkzeug==0.16.0
 wrapt==1.11.2
