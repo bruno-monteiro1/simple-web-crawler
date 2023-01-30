@@ -4,16 +4,14 @@ Simple web crawler written in Python with help of BeautifulSoup (and Flask!)
 This program uses Flask to be exposed like an API and crawls any website. 
 It retrieves the links to the pages but also to JS, CSS and image files.
 
-You can check it out here: 
-
-https://simple-web-crawler.herokuapp.com/
+This was available at a free Heroku server, but since those are not a thing anymore, it should be downloaded, built and tested locally. 
 
 ## Hitting the API
 
 The program have only one endpoint, and it expects a GET request with two parameters: domain link and depth.
 Example:
 
-```https://simple-web-crawler.herokuapp.com/crawl?domain=http://nubank.com.br/&depth=0```
+```http://localhost:5000/crawl?domain=http://nubank.com.br/&depth=0```
 
 You can call it with your browser, but something like Postman may be a better choice, since the visualization of the result will be better. 
 
